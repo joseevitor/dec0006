@@ -26,6 +26,11 @@ class MinhaListaEncadeada: public ListaEncadeadaAbstrata<T>
      */
     virtual ~MinhaListaEncadeada(){
         //escreva o algoritmo esperado
+        for (size_t i = 0; i < count; i++)
+        {
+            
+        }
+        
     }
 
     /**
@@ -66,8 +71,6 @@ class MinhaListaEncadeada: public ListaEncadeadaAbstrata<T>
         if(this->_primeiro==nullptr)
             throw ExcecaoListaEncadeadaVazia();
 
-           
-
         Elemento<T>* aux = this-> _primeiro;
         
         for(int i=0; this->_tamanho && aux != nullptr; i++){
@@ -78,7 +81,6 @@ class MinhaListaEncadeada: public ListaEncadeadaAbstrata<T>
         }
         throw ExcecaoDadoInexistente();
 
-       
     };
     
     /**
@@ -96,7 +98,6 @@ class MinhaListaEncadeada: public ListaEncadeadaAbstrata<T>
             if(dado_lista -> dado == dado){
                 return true;
             }       
-          
         }
         return false; 
     };
